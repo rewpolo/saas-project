@@ -1,3 +1,32 @@
-@media and screen (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  [aria-controls="navBarDropdown"] {
+    display: block;
+  }
+
+  [aria-expanded="false"] ~ ul {
+    display: none;
+  }
+
+  [aria-expanded="true"] ~ ul {
+    display: flex;
+    position: absolute;
+    margin-top: 3.75rem;
+    margin-bottom: 0;
+    right: 0;
+    padding-bottom: 35rem;
+    padding-top: 10rem;
+    background: white;
+    width: 100%;
+    text-align: right;
+    z-index: 100;
+  }
   
+  [aria-expanded="true"] ~ img {
+    background: white;
+  }
+
+  [aria-expanded="true"] ~ ul li a {
+    margin-right: 20px;
+    color: #666;
+  }
 }

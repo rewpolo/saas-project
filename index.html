@@ -8,26 +8,31 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="https://kit.fontawesome.com/28a376b618.js" crossorigin="anonymous"></script>
+    <!-- <script src="saas.js"></script> -->
     <title>SAAS Website</title>
   </head>
     <body>
       <div class="container">
         <div class="hero-top">
           <div class="background-hero-top">
-            
           </div>
         <!-- nav -->
-          <div class="navbar">
-            <img src="/saas-project-assets/project_logo/logo.svg" alt="front logo">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Learn</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Hire Us</a></li>
-              <li><a href="#">Buy Now</a></li>
-            </ul>
-          </div>
+          <nav class="navbar nav" id="topNav">
+            <div class="navbar-container">
+              <button class="navbar-toggler" aria-expanded="false" aria-controls="navBarDropdown">
+                <span>&#9776;</span>
+              </button>
+              <img src="/saas-project-assets/project_logo/logo.svg" alt="front logo" class="navbar-brand">
+              <ul class="navbar-nav">
+                <li class="nav-link"><a href="#">Home</a></li>
+                <li class="nav-link"><a href="#">Features</a></li>
+                <li class="nav-link"><a href="#">Learn</a></li>
+                <li class="nav-link"><a href="#">Pricing</a></li>
+                <li class="nav-link"><a href="#">Hire Us</a></li>
+                <li class="nav-link"><a href="#">Buy Now</a></li>
+              </ul>
+            </div>
+          </nav>
 
           <!-- logos -->
           <div class="top-section">
@@ -381,5 +386,17 @@
           <p>When you visit or interact with our sites, services or tools, we or our authorised service providers may use cookies for storing information to help provide you with a better, faster and safer experience and for marketing purposes. </p>
         </div>
       </div>
+
+      <script >
+        const navButton = document.querySelector('button[aria-expanded]');
+  
+        function toggleNav({ target }) {
+          const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+          navButton.setAttribute('aria-expanded', !expanded);
+        }
+  
+        navButton.addEventListener('click', toggleNav);
+      </script>
+      
     </body>
 </html>
