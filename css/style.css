@@ -159,8 +159,8 @@
 }
 
 .right > .lg-icons, .right > .sm-icons {
-    border-radius: 50%;
-    box-shadow: 0px 3px 13px rgba(0,0,0,.3);
+  border-radius: 50%;
+  box-shadow: 0px 3px 13px rgba(0,0,0,.3);
 }
 
 .lg-asana {
@@ -673,7 +673,6 @@
 .first-footer-images {
   display: flex;
   align-items: center;
-  width: 100%;
 }
 
 .first-footer-images img {
@@ -907,6 +906,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   margin: 0 1.875rem;
+  align-items: center;
 }
 
 .privacy-policy > p {
@@ -937,11 +937,24 @@ textarea {
 
 .social i, .social select {
   margin: 0 1rem;
+  height: var(--size-30);
+ 
 }
 
 .social i:nth-child(2) {
   background-color: #677788;
   color: #ECF2FF;
+}
+
+.us-select {
+  margin: 1rem;
+}
+
+.us-select select {
+  background-color: #ECF2FF;
+  border-radius: 3px;
+  border: none;
+  height: var(--size-30);
 }
 
 .footer-bottom > p {
